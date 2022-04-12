@@ -1,0 +1,11 @@
+1.habr.com
+2.click to development  and admin tab
+check header is exists and equals tabName
+3.click to search, type "selenium", press enter, check tabs exists
+
+todo:
+1) use xpath 
+2) Fix locators
+3) add logging
+4) Build pipeline
+5) Add Allure
