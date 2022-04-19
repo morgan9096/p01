@@ -1,3 +1,4 @@
+import time
 from pages import HabrHelper
 
 
@@ -18,7 +19,7 @@ def __check_tab(browser, tab_name):
     habr_main_page = HabrHelper(browser)
     tab = habr_main_page.get_tab_by_name(tab_name)
     tab.click()
+    time.sleep(1)
     header = habr_main_page.get_header_by_text(tab_name)
     assert header is not None
-    print(dir(header))
-    assert header.textContent == tab_name
+    assert header.text == tab_name

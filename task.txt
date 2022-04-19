@@ -9,3 +9,4 @@ todo:
 3) add logging
 4) Build pipeline
 5) Add Allure
+6) use parametrization
