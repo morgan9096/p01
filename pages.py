@@ -12,8 +12,7 @@ class HabrHelper(BasePage):
 
     def get_header_by_text(self, text):
         elements = self.find_elements(LOCATORS.HEADER)
-        print(dir(elements[0]))
-        result_list = [element for element in elements if element.textContent.strip() == text]
+        result_list = [element for element in elements if element.text.strip() == text]
         return result_list[0] if result_list else None
 
     def enter_word(self, word):
@@ -30,7 +29,7 @@ class HabrHelper(BasePage):
     def get_tab_by_name(self, name):
         tabs = self.find_elements(LOCATORS.TABS)
         for tab in tabs:
-            if tab.textContent.strip() == 'name':
+            if tab.text.strip() == name:
                 return tab
 
     def get_articles(self):
